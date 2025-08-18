@@ -1,0 +1,5 @@
+crewai==0.157.0
+langchain-groq
+load_dotenv
+crewai_tools
+streamlit
