@@ -1,16 +1,14 @@
 import os
-from crewai import Agent
-from langchain_groq import ChatGroq
+from crewai import Agent, LLM
 from dotenv import load_dotenv
 from crew.tools import google_search_tool
 
 load_dotenv()
 
-llm = ChatGroq(
-    model="groq/llama-3.3-70b-versatile",
-    groq_api_key=os.getenv("GROQ_API_KEY"),
+llm = LLM(
+    model="gpt-4o",
+    api_key=os.getenv("OPENAI_API_KEY"),
     temperature=0,
-    verbose=True,
 )
 
 researcher = Agent(

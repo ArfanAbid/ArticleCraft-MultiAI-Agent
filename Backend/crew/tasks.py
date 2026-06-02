@@ -21,7 +21,6 @@ write_task = Task(
     expected_output="A 4 paragraph long article on the topic: {topic}, formatted as markdown.",
     tools=[google_search_tool],
     agent=writer,
-    async_execution=False
 )
 
 proof_read_task = Task(
@@ -33,5 +32,4 @@ proof_read_task = Task(
     expected_output="A 4 paragraph long article on the topic: {topic}, formatted as markdown with all the relevant sources",
     tools=[google_search_tool],
     agent=proof_reader,
-    async_execution=False,
 )
