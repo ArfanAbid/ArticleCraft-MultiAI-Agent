@@ -1,8 +1,6 @@
 from crewai import Task
-from agents import researcher, writer, proof_reader
-from tools import google_search_tool
-
-# Createting tasks
+from crew.agents import researcher, writer, proof_reader
+from crew.tools import google_search_tool
 
 research_task = Task(
     description=("""
@@ -36,5 +34,4 @@ proof_read_task = Task(
     tools=[google_search_tool],
     agent=proof_reader,
     async_execution=False,
-    # output_file="newsletter.md"
 )

@@ -1,5 +1,6 @@
-crewai==0.157.0
-langchain-groq
-load_dotenv
+crewai
 crewai_tools
-streamlit
+langchain-groq
+python-dotenv
+fastapi
+uvicorn[standard]
